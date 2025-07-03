@@ -25,7 +25,7 @@ export default function Login() {
   const handelLogin = () => {
     // console.log(user)
     user.SET_TOKEN("userLoginEnglish");
-    navigate("/database", { replace: true });
+    navigate("/englishTool/database", { replace: true });
   };
   return (
     <>

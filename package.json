@@ -3,11 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://codehan613.github.io/englishTool/",
   "scripts": {
     "dev": "vite",
-    "build": " vite build",
+    "build": " vite build & cp dist/index.html dist/404.html ",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@heroui/react": "^2.7.4",

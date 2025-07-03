@@ -25,14 +25,14 @@ export default function HomeIndex() {
   };
   const handelTag = (lessonKey: any) => {
     console.log(lessonKey);
-    navigate(`/createGramer/?lesson=${lessonKey}`);
+    navigate(`/englishTool/createGramer/?lesson=${lessonKey}`);
   };
   const handelOut = () => {
     // const user=useUserStore();
     // user.RESET();
+    navigate(`/englishTool/login`);
     localStorage.clear();
-    // navigate(`/login`, { replace: true });
-    window.location.reload();
+    // window.location.reload();
   };
 
   return (

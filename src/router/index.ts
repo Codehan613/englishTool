@@ -7,7 +7,7 @@
  */
 
 import routes from "./routes";
-import { createBrowserRouter, RouteObject } from "react-router-dom";
+import { createBrowserRouter, RouteObject,createHashRouter } from "react-router-dom";
 
 export default createBrowserRouter(routes);
 

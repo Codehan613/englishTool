@@ -33,9 +33,9 @@ console.log(getPath("home"));
 const routes: RouteObject[] = [
   {
     id: "root",
-    path: "/",
+    path: "/englishTool",
     loader: RootLoader,
-    Component: BasicsLayout,
+    Component: lazy(modules[getPath("home")]),
 
     // children: [
     //   {
@@ -46,33 +46,33 @@ const routes: RouteObject[] = [
     // ],
   },
   {
-    path: "/database",
+    path: "/englishTool/database",
     loader: ProtectedLoader,
     Component: lazy(modules[getPath("home")]),
     // children: [{ index: true, Component:  }],
   },
   {
-    path: "/createGramer",
+    path: "/englishTool/createGramer",
     loader: ProtectedLoader,
     action: LoginAction,
     Component: lazy(modules[getPath("CreateGramer")]),
   },
   {
-    path: "/login",
+    path: "/englishTool/login",
     loader: LoginLoader,
     action: LoginAction,
     Component: lazy(modules[getPath("login")]),
   },
-  {
-    // logout路由只用来退出登录，不展示页面
-    path: "/logout",
-    action: LogoutAction,
-    Component: lazy(modules[getPath("error")]),
-  },
-  {
-    path: "*",
-    Component: lazy(modules[getPath("error")]),
-  },
+  // {
+  //   // logout路由只用来退出登录，不展示页面
+  //   path: "/logout",
+  //   action: LogoutAction,
+  //   Component: lazy(modules[getPath("error")]),
+  // },
+  // {
+  //   path: "*",
+  //   Component: lazy(modules[getPath("error")]),
+  // },
 ];
 
 export default routes;

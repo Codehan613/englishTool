@@ -37,9 +37,9 @@ export function RootLoader(): any {
   //  const { token } = useRouteLoaderData('root') as AuthStatus;
 
   if (token) {
-    return redirect("/database");
+    return redirect("/englishTool/database");
   } else {
-    return redirect("/login");
+    return redirect("/englishTool/login");
   }
 }
 
@@ -55,7 +55,7 @@ export function ProtectedLoader({ request }: LoaderFunctionArgs) {
   if (!token) {
     const params = new URLSearchParams();
     params.set("from", new URL(request.url).pathname);
-    return redirect("/login?" + params.toString());
+    return redirect("/englishTool/login?" + params.toString());
   }
   return null;
 }
@@ -105,7 +105,7 @@ export async function LoginAction({ request }: LoaderFunctionArgs) {
   }
 
   const redirectTo = formData.get("redirectTo") as string | null;
-  return redirect(redirectTo || "/");
+  return redirect(redirectTo || "/englishTool");
 }
 
 /**
@@ -114,5 +114,5 @@ export async function LoginAction({ request }: LoaderFunctionArgs) {
 export function LogoutAction() {
   // We signout in a "resource route" that we can hit from a fetcher.Form
   useUserStore.getState().REMOVE_TOKEN();
-  return redirect("/login");
+  return redirect("/englishTool/login");
 }

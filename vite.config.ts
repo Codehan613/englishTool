@@ -77,8 +77,8 @@ export default defineConfig(({ mode }) => {
     // publicPath = `${env.VITE_APP_RESOURCE_URL}${dirName}`
     publicPath = `${env.VITE_APP_RESOURCE_URL}`;
     if (isProd) {
-      outputDir = `./dist/${dirName}`
-      // outputDir = `./dist`;
+      // outputDir = `./dist/${dirName}`
+      outputDir = `./dist`;
     }
   }
 
