@@ -1,0 +1,1 @@
+import{j as t}from"./react-In5IJgbb.js";import{O as r}from"./react-router-DVfM_2ln.js";import"./color-CqkleIqs.js";import"./cookie--_YQFYBD.js";import"./react-dom-CeiFjhki.js";import"./scheduler-BNqrtbQi.js";function a(){return t.jsx(t.Fragment,{children:t.jsx(r,{})})}export{a as default};
